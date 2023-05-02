@@ -1,0 +1,14 @@
+---
+- name: Deploy GitHub Runner
+  hosts: github-runner
+  become: yes
+  vars:
+    - runner_user: runner
+    - github_account: jackhodgkiss
+    - github_repo: stackhpc-kayobe-config
+    - runner_labels:
+        - self-hosted
+    - access_token: "{{ github_access_token }}"
+    - hide_sensitive_logs: false
+  roles:
+    - role: monolithprojects.github_actions_runner

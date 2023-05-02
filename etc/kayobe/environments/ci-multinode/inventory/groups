@@ -3,3 +3,8 @@
 [container-image-builders:children]
 # Build container images on the all-in-one controller.
 controllers
+
+[ansible-control]
+
+[infra-vms:children]
+ansible-control

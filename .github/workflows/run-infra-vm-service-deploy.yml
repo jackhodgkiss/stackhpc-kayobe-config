@@ -1,0 +1,40 @@
+name: Run infra VM service deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      kayobeLimit:
+        description: |
+          The ansible limit to use when running kayobe playbooks.
+      kayobeTags:
+        description: |
+          The ansible tags to use when running kayobe playbooks.
+
+jobs:
+  infra-vm-service-deploy:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: read
+    container:
+      image: ghcr.io/${{ github.repository }}:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout kayobe config
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Symlink source checkout to expected location
+        run: sudo ln -s $PWD /src
+
+      - name: Run infra vm service deploy
+        run: |
+          /src/.automation/pipeline/infra-vm-service-deploy.sh
+        env:
+          KAYOBE_ENVIRONMENT: 'ci-multinode'
+          KAYOBE_TAGS: '${{ github.event.inputs.kayobeTags }}'
+          KAYOBE_LIMIT: '${{ github.event.inputs.kayobeLimit }}'
+          HOME: '/stack'

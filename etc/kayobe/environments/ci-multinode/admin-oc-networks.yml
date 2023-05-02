@@ -1,0 +1,14 @@
+---
+admin_oc_cidr: 10.209.0.0/16
+admin_oc_allocation_pool_start: 0.0.0.0
+admin_oc_allocation_pool_end: 0.0.0.0
+admin_oc_bootproto: dhcp
+
+admin_oc_ips:
+  jph-controller-01: 10.209.0.37
+  jph-controller-02: 10.209.0.123
+  jph-controller-03: 10.209.3.184
+  jph-compute-01: 10.209.2.48
+  jph-compute-02: 10.209.2.64
+  jph-seed: 10.209.1.36
+  jph-ansible-control: 10.209.3.37

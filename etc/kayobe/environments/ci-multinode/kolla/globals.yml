@@ -1,12 +1,12 @@
 ---
 # Glance Ceph configuration
-glance_backend_ceph: "yes"
+#glance_backend_ceph: "yes"
 
 # Cinder Ceph configuration
-cinder_backend_ceph: "yes"
+#cinder_backend_ceph: "yes"
 
 # Nova Ceph configuration
-nova_backend_ceph: "yes"
+#nova_backend_ceph: "yes"
 
 # Because this is a vxlan interface, Kayobe can't generate the config for it.
 # Therefore we can't use this interface as the external network
@@ -24,4 +24,4 @@ octavia_provider_drivers: "ovn:OVN provider"
 octavia_provider_agents: "ovn"
 
 # Manila CephFS configuration
-manila_cephfs_filesystem_name: manila-cephfs
+#manila_cephfs_filesystem_name: manila-cephfs

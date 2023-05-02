@@ -1,0 +1,27 @@
+external_ips:
+  jph-seed: 192.168.38.3
+internal_ips:
+  jph-compute-01: 192.168.37.6
+  jph-compute-02: 192.168.37.7
+  jph-controller-01: 192.168.37.3
+  jph-controller-02: 192.168.37.4
+  jph-controller-03: 192.168.37.5
+provision_oc_ips:
+  jph-seed: 192.168.33.128
+public_ips:
+  jph-controller-01: 192.168.39.4
+  jph-controller-02: 192.168.39.5
+  jph-controller-03: 192.168.39.6
+  jph-seed: 192.168.39.3
+storage_ips:
+  jph-compute-01: 192.168.41.6
+  jph-compute-02: 192.168.41.7
+  jph-controller-01: 192.168.41.3
+  jph-controller-02: 192.168.41.4
+  jph-controller-03: 192.168.41.5
+tunnel_ips:
+  jph-compute-01: 192.168.40.6
+  jph-compute-02: 192.168.40.7
+  jph-controller-01: 192.168.40.3
+  jph-controller-02: 192.168.40.4
+  jph-controller-03: 192.168.40.5

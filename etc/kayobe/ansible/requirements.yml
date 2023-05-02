@@ -12,3 +12,7 @@ roles:
   - name: wazuh-ansible
     src: https://github.com/stackhpc/wazuh-ansible
     version: stackhpc
+  - name: kayobe_automation_workflows
+    src: https://github.com/jackhodgkiss/kayobe-automation-workflows
+  - name: monolithprojects.github_actions_runner
+    src: https://github.com/MonolithProjects/ansible-github_actions_runner

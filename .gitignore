@@ -1,5 +1,8 @@
 *.py[cod]
 
+**/ansible/collections/
+**/ansible/roles/
+
 # C extensions
 *.so
 

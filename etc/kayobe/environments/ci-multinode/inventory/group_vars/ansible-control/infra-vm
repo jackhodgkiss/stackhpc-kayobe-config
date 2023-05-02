@@ -1,0 +1,4 @@
+infra_vm_users:
+  - username: runner
+    groups:
+      - docker

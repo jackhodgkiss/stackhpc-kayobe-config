@@ -1,0 +1,7 @@
+- name: Write Kayobe Automation Workflows
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - role: kayobe_automation_workflows
+      vars:
+        kayobe_environment: ci-multinode
