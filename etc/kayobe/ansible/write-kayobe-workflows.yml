@@ -4,4 +4,6 @@
   roles:
     - role: kayobe_automation_workflows
       vars:
-        kayobe_environment: ci-multinode
+        output_directory: "{{ ansible_facts.env.KAYOBE_CONFIG_PATH }}/../../.github/workflows"
+        kayobe_arguments:
+          KAYOBE_ENVIRONMENT: ci-multinode
